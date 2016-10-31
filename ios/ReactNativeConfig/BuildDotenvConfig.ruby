@@ -8,8 +8,10 @@ if File.exists?("/tmp/envfile")
   file = File.read("/tmp/envfile").strip
 else
   custom_env = false
-  file = File.join(Dir.pwd, "../../../.env")
+  file = ".env"
 end
+
+file = File.join(Dir.pwd, "../../../", file)
 
 puts "Reading env from #{file}"
 
