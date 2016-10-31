@@ -30,6 +30,7 @@ rescue Errno::ENOENT
   puts("*** Missing .env file ****")
   puts("**************************")
   {} # set dotenv as an empty hash
+  raise
 end
 
 # create obj file that sets DOT_ENV as a NSDictionary
