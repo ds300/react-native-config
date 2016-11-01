@@ -13,6 +13,7 @@ def readDotEnv = {
       println("**************************")
       println("*** Missing .env file ****")
       println("**************************")
+      throw new GradleScriptException('Missing .env file.')
     }
     project.ext.set("env", env)
 }
